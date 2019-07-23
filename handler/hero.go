@@ -13,7 +13,7 @@ func GetHeros(c echo.Context) error {
 	name := c.Param("name")
 	var heros map[string]interface{}
 
-	req, err := http.NewRequest("GET", "https://superheroapi.com/api/605647239925674/search/"+name, nil)
+	req, err := http.NewRequest("GET", "https://superheroapi.com/api/access-token/search/"+name, nil)
 	if err != nil {
 		return err
 	}
@@ -43,7 +43,7 @@ func GetDetail(c echo.Context) error {
 	id := c.Param("id")
 	var heros map[string]interface{}
 
-	req, err := http.NewRequest("GET", "https://superheroapi.com/api/605647239925674/"+id, nil)
+	req, err := http.NewRequest("GET", "https://superheroapi.com/api/access-token/"+id, nil)
 	if err != nil {
 		return err
 	}
